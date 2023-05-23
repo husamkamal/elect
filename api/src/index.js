@@ -48,13 +48,14 @@ app.post('/login', (req, res) => {
       if (!user) {
         res.status(404).json({ error: 'User not found' });
       } else {
+        console.log(user)
         // Compare the provided password with the stored password
         bcrypt.compare(password, user.password, (err, result) => {
           if (err) {
             res.status(500).json({ error: 'Failed to compare passwords' });
           } else if (result) {
             // Passwords match, user is authenticated
-            res.json({ message: 'Login successful' });
+            res.status(200).json({ message: 'Login successful' });
           } else {
             // Passwords don't match
             res.status(401).json({ error: 'Invalid password' });
@@ -69,7 +70,7 @@ app.post('/login', (req, res) => {
 // Register user
 app.post('/register', (req, res) => {
   const { username, password,phoneNumber } = req.body;
-
+  console.log({ username, password,phoneNumber } )
   // Check if the username already exists
   User.findOne({ username })
     .then((user) => {

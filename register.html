@@ -116,10 +116,6 @@ span.psw {
                 <a class="nav-link" href="login.html">تسجيل الدخول</a>
     
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="register.html">انشاء حساب</a>
-    
-              </li>
     
               <li class="nav-item">
                 <a class="nav-link" href="contanct.html">تواصل معنا </a>
@@ -133,31 +129,27 @@ span.psw {
       </nav>
 <h2>Register </h2>
 
-<form id="formRegister"  method="post">
+<form id="registerForm" >
 
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
+    <label for="usernameRegister"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" id="usernameRegister"  required>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="passwordRegister"><b>Password</b></label>
     <input type="password" placeholder="Enter Password"  id="passwordRegister" required>
+    <label for="phoneRegister"><b>phone number</b></label>
+    <input type="password" placeholder="Enter phone number"  id="phoneRegister" required>
         
-    <label for="psw"><b>Phone Number</b></label>
-    <input type="text" placeholder="Enter Password"  id="PhoneRegister" required>
-        
-    <button  type="submit"  >Register</button>
-    <label>
-      <input type="checkbox" checked="checked" > Remember me
-    </label>
+    <button  type="submit"  >register</button>
   </div>
 
-
+ 
 </form>
+<script src="js/main.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/jquery-3.6.4.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
